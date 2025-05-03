@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_alignParentTop="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/t6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/t8">
+
+                        <TextView
+                            android:id="@+id/w"
+                            android:layout_width="wrap_content"
+android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Parameter Values"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/wate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/w"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Water Level"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/water"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/w"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="0%"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/t5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Water Monitoring"
+
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <RelativeLayout
+                        android:id="@+id/t7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t6"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/t5">
+
+                        <ProgressBar
+                            android:id="@+id/progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressDrawable="@drawable/progress" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t7"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/t5"
+                        android:text="PPM"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/turbid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t7"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="0   "
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <ProgressBar
+                        android:id="@+id/progress2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/turbid"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/t5"
+                        android:progressDrawable="@drawable/progress" />
+
+                    <TextView
+                        android:id="@+id/r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/t5"
+                        android:text="Reservoir"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/reserve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="0%"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <ProgressBar
+                        android:id="@+id/progress3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/r"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/t5"
+                        android:max="100"
+                        android:progressDrawable="@drawable/progress" />
+
+                    <RelativeLayout
+                        android:id="@+id/t8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t5"
+                        android:layout_centerVertical="true">
+
+                        <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+                            android:id="@+id/circularFillableLoaders"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/fish"
+                            android:visibility="visible"
+                            app:cfl_border="true"
+                            app:cfl_border_width="8dp"
+                            app:cfl_progress="90"
+                            app:cfl_wave_amplitude="0.06"
+                            app:cfl_wave_color="#B22196F3" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/progress3">
+
+                        <TextView
+                            android:id="@+id/t11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="PPM:"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/mint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/t11"
+                            android:text="Minimum: 0"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+                        <TextView
+                            android:id="@+id/maxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/mint"
+                            android:text="Maximum: 0"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/cardView"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/lo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@+id/loo">
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Thermal Monitoring"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <com.rldev.aquagrip.SpeedometerView
+                            android:id="@+id/speedometer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/t1" />
+
+                        <TextView
+                            android:id="@+id/tmp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/speedometer"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Temperature: 0℃"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tmp"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/hldr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Status: "
+                                android:textColor="@color/black"
+
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/tmpstat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+
+                                android:layout_toRightOf="@id/hldr"
+                                android:text="Normal"
+                                android:textColor="#388e3c"
+                                android:typeface="sans" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/loo"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="Components Status"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/fan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Fan Status: "
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/fans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/heat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fan"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+
+                            android:text="Heater Status:"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/heats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fan"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heat"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="Thermal Presets"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t3"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Minimum: 0℃"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/min"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Maximum: 0℃"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_below="@id/cardView2"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:id="@+id/t12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Food and Lights"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+                    <TextView
+                        android:id="@+id/f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t12"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Amount of Food"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t12"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="0%"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <ProgressBar
+                        android:id="@+id/progress4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/f"
+                        android:layout_marginLeft="10dp"
+                        android:progressDrawable="@drawable/progress" />
+                    <TextView
+                        android:id="@+id/li"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Lights Preview:"
+                        android:textColor="@color/black"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/lights"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="COLOR"
+                        android:textColor="@android:color/transparent"
+                        android:typeface="sans" />
+                </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="100dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Feeding Schedule"
+                            android:id="@+id/t13"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <ListView
+                            android:id="@+id/sched"
+                            android:nestedScrollingEnabled="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/t13"
+
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/cardView3"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/loo1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true">
+
+                        <TextView
+                            android:id="@+id/t9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="Motor Pumps"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/fill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t9"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Filling Motor: "
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/fills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t9"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/drain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fill"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Draining Motor: "
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/drains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fill"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:id="@+id/mot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/drain"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Motor Status:"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/mots"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/drain"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Inactive"
+                            android:layout_marginRight="10dp"
+                            android:textColor="#388e3c"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/loo2"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/t10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Light and Solenoid"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/sfill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t10"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Filling Valve: "
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/sfills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t10"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/sdrain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sfill"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Lights: "
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <Switch
+                            android:id="@+id/sdrains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sfill"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:id="@+id/valve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sdrain"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Valve Status:"
+                            android:textColor="@color/black"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/valves"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sdrain"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Inactive"
+                            android:textColor="#388e3c"
+                            android:typeface="sans" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/startbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/cardView4"
+                android:text="START"
+                app:strokeColor="@color/purple_500" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

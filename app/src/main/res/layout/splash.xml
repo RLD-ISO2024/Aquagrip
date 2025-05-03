@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+<com.scwang.wave.MultiWaveHeader
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:scaleY="2"
+    android:id="@+id/wave_header"/>
+    <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+        android:id="@+id/cfl"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fish"
+        android:visibility="visible"
+        app:cfl_border="true"
+        app:cfl_border_width="8dp"
+        app:cfl_progress="0"
+        app:cfl_wave_amplitude="0.06"
+        app:cfl_wave_color="#B22196F3" />
+
+
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleY="-2"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/wave_footer"/>
+
+</RelativeLayout>
